@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telewatch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<style>
+    body {
+            font-family: Roboto, sans-serif;
+        }
+
+        .navbar {
+            background-color: black;
+        }
+
+        #cabecalho .nav .nav-link,
+        .navbar-brand,
+        .navbar-brand:hover,
+        .nav-cardapio .nav-link.active:hover {
+            color: #00d2d3;
+        }
+
+        #cabecalho .nav .nav-link.active {
+            background-color: #00d2d3;
+            color: white;
+        }
+
+        .navbar-toggler {
+            background-color: #00d2d3;
+        }
+
+        .carousel {
+        max-height: 400x; 
+    }
+
+    .carousel-inner img {
+        max-height: 400px; 
+        object-fit: cover; 
+    }
+
+    .section-title {
+        font-family: 'Fira Sans', sans-serif;
+    }
+
+    #inicio, #categorias {
+        background-color: #c8d6e5;
+    }
+
+    .text-colored {
+        color: #00d2d3;
+    }
+
+    .cores {
+        color: black;
+    }
+
+    .nav-cardapio .nav-link.active,
+    #trabalhe-conosco button {
+        background-color: #00d2d3;
+        color: white;
+    }
+
+    .nav-cardapio .nav-link:hover {
+        color:  #00d2d3;
+    }
+
+    .social-links li {
+        list-style: none;
+        display: inline;
+    }
+
+    .social-links a {
+        text-decoration: none;
+    }
+
+    @media (max-width: 767px) {
+        .carousel-item img {
+            height: 280px;
+        }
+
+    }    
+
+</style>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
+        <div class="container">
+            <h1 class="navbar-brand m-0 section-title" style="font-size: 24px;"><i class="bi bi-exclamation-square m-1"></i>Informação com Valor</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegecao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <nav class="navbar-collapse collapse justify-content-end" id="menu-navegecao">
+            <ul class="nav nav-pills d-block d-md-flex">
+                <li class="nav-item fw-bold">
+                    <a href="#inicio" class="nav-link"><i class="bi bi-house-door m-1"></i>Início</a><!--active adiciona background color nas bordas e espaçamento-->
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="#noticias" class="nav-link"><i class="bi bi-files m-1"></i>Principais Notícias</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="#categorias" class="nav-link"><i class="bi bi-files m-1"></i>Categorias</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a href="#trabalhe-conosco" class="nav-link"><i class="bi bi-files m-1"></i>Trabalhe Conosco</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smooth-scroll="true">
+        <section id="inicio">
+            <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="3000" class="carousel-item active">
+                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2017/08/26/10/47/businessman-2682712_1280.jpg"/>
+                        <div class="carousel-caption"></div>
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2015/03/28/09/18/person-695656_640.jpg" />
+                        <div class="carousel-caption"></div>
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2016/12/14/09/40/facebook-1905890_1280.jpg" />
+                        <div class="carousel-caption"></div>
+                    </div>
+                </div>
+                <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                </div>        
+            </div> 
+            <div class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                                <img src="https://cdn.pixabay.com/photo/2016/12/13/10/41/fake-1903774_1280.png" class="d-block w-100 rounded">
+                        </div>
+                        <div class="col-md-7 mt-3 mt-md-0">
+                            <h2 class="section-title">Quem somos<span class="text-colored"> nós</span></h2>
+                            <p class="fw-bold">Melhor canal de reportagens, análises, conteúdo nas redes sociais e todas as propostas na área educacional</p>
+                            <h3 class="section-title">Nosso <span class="text-colored">objetivo</span></h3>
+                            <p class="fw-bold">Nosso objetivo é oferecer conteúdo de qualidade para ajudar as pessoas a tomar melhores decisões</p>
+                            <ul>
+                                <li class="fw-bold">Narrativas Independentes</li>
+                                <li class="fw-bold">Jornalismo</li>
+                                <li class="fw-bold">Ação</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="noticias" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center">Principais <span class="text-colored">notícias</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://cdn.pixabay.com/photo/2016/05/18/10/52/buick-1400243_640.jpg" class="d-block w-100 rounded mb-2">
+                        <h3 class="fs-5 pb-1 fw-bold">Novo Citroën C3 elétrico já está no Brasil</h3>
+                        <p>Apresentado na Índia em janeiro deste ano, versão elétrica do Citroën C3, já está no Brasil. O hatch foi flagrado camuflado, mas deve chegar em breve.</p>
+                    </div>
+                    <div class="col-md-4 pt-1">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/16/15/22/gunkanjima-725797_640.jpg" class="d-block w-100 rounded mb-2">
+                        <h3 class="fs-5 pb-1 fw-bold">Israel ataca os aeroportos de Damasco e Aleppo</h3>
+                        <p>Israel já bombardeou três países que não estão em guerra (Síria, Líbano e Egito) e ignorou TODOS os apelos da comunidade internacional.</p>
+                    </div>
+                    <div class="col-md-4 pt-1">
+                        <img src="https://cdn.pixabay.com/photo/2020/02/06/08/19/band-4823341_640.jpg" class="d-block w-100 rounded mb-2">
+                        <h3 class="fs-5 pb-1 fw-bold">A cantora escolheu "Our Song" e "You’re On Your Own, Kid"</h3>
+                        <p>Taylor Swift cortou a performance de "The Archer", "no body, no crime", "Long Live", "cardigan" e "Wildest Dreams" no filme da The Eras Tour.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="categorias" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center mb-5">Todas as <span class="text-colored">categorias</span></h2>
+                </div>
+                <div class="row">
+                    <aside class="col-md-2">
+                    <nav class="nav nav-pills flex-column nav-cardapio">
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#politica" class="fw-bold text-start nav-link cores active">Política</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#economia" class="fw-bold text-start nav-link cores">Economia</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#educacao" class="fw-bold text-start nav-link cores">Educação</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#tecnologia" class="fw-bold text-start nav-link cores">Tecnologia</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#midias" class="fw-bold text-start nav-link cores">Mídias</button>                       
+                    </nav>
+                    </aside>
+                    <div class="col-md-10">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="politica">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2020/01/23/20/57/berlin-4788732_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Sulistas</h4>
+                                                <p class="card-text">Cidade de SC realoca moradores para município vizinho devido a enchentes</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2017/10/13/11/49/putin-2847423_1280.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Joe Biden</h4>
+                                                <p class="card-text">Biden fala novamente com Netanyahu; número de mortos pelo Hamas pode subir</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2019/04/29/09/33/anonymous-4165613_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Anônimos Cyber</h4>
+                                                <p class="card-text">Fakes nas redes sociais: as consequências jurídicas das violações à imagem e à honra</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2019/05/26/08/00/handshake-4229703_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">ONU</h4>
+                                                <p class="card-text">Acordo na ONU, FAB busca articular solução para brasileiros em Gaza com Egito</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="economia">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2020/06/20/02/40/international-5319462_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Líderes do G7</h4>
+                                                <p class="card-text">Condenaram os "ataques terroristas" do Hamas em Israel e expressaram "apoio inabalável" à Ucrânia</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2017/08/16/15/28/stock-exchange-2648118_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Wall Street</h4>
+                                                <p class="card-text">Wall Street cai com alta em rendimentos do Treasury; investidores digerem dados de inflação nos EUA</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2010/12/13/09/51/account-1778_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Anônimos Cyber</h4>
+                                                <p class="card-text">Fakes nas redes sociais: as consequências jurídicas das violações à imagem e à honra</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2017/07/25/23/43/agriculture-2539967_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Agro</h4>
+                                                <p class="card-text">Preços da soja em Chicago saltam após USDA cortar previsão para colheitas dos EUA</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="educacao">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Livros</h4>
+                                                <p class="card-text">Os 11 melhores livros para entender o conflito entre Israel e Palestina</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2015/08/05/13/55/children-876543_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Escola Albert Sabin</h4>
+                                                <p class="card-text">Realiza Festa da Primavera em Belford Roxo</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2019/09/01/06/17/board-4444443_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Professores</h4>
+                                                <p class="card-text">Formação de professores é  obstáculo à qualidade da educação no Brasil</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2019/04/18/08/42/books-4136388_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Seduc</h4>
+                                                <p class="card-text">formação de professores é  obstáculo à qualidade da educação no Brasil</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tecnologia">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2016/11/27/21/42/stock-1863880_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">China</h4>
+                                                <p class="card-text">China vai dispensar verificações de segurança para algumas exportações de dados</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2016/11/03/18/19/social-media-1795578_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Apple</h4>
+                                                <p class="card-text">Apple consertará superaquecimento de iPhone, diz revista</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Big Techs</h4>
+                                                <p class="card-text">Big Techs financiarem 5G deve ficar para próxima Comissão, dizem fontes</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603120_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Movimentações</h4>
+                                                <p class="card-text">Cathie Wood revela “nova queridinha” em IA: “essa empresa vai mudar tudo”</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="midias">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2016/08/16/17/32/hollywood-sign-1598473_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Pabllo Vittar</h4>
+                                                <p class="card-text">Com 200 MIL pessoas simultaneamente, detém a maior audiência.</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2013/02/09/01/31/charlize-theron-79562_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Britney Spears</h4>
+                                                <p class="card-text">Britney Spears jantou com Maluma e J Balvin.</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2017/10/01/16/09/kermit-2806001_640.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Ludmilla</h4>
+                                                <p class="card-text">Ludmilla se tornou a cantora afro-latina com mais músicas</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <article class="card">
+                                            <img src="https://cdn.pixabay.com/photo/2017/02/22/16/14/stage-2089831_1280.jpg" />
+                                            <div class="card-body">
+                                                <h4 class="card-title fw-bold">Novo Albúm</h4>
+                                                <p class="card-text">Melody RECUSA a oferta de gravar versão de nova música de Anitta</p>
+                                                <a href="#" class="btn btn-dark"><i class="bi bi-clipboard2-check-fill"></i>Acesse para mais informações</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="trabalhe-conosco" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center">Entre em <span class="text-colored">contato</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 mb-5">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label fw-bold">Seu nome</label>
+                                <input type="text" id="nome" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold">Seu e-mail</label required>
+                                <input type="email" id="email" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label fw-bold">Seu telefone (opcional)</label>
+                                <input type="tel" id="telefone" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label fw-bold">Sua mensagem</label>
+                                <textarea class="form-control" id="mensagem" required></textarea>
+                            </div>
+                            <button type="submit" class="btn fw-bold">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <h3 class="section-title fs-5 text-colored pt-4"><i class="bi bi-hand-thumbs-up-fill"></i> Redes sociais</h3>
+                            <ul class="social-links">
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-facebook text-colored"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-5 ms-1 me-1">
+                                    <a href="#">
+                                        <i class="bi bi-instagram text-colored"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-whatsapp text-colored"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row mt-4">
+                            <h3 class="section-title fs-5 text-colored"><i class="bi bi-cursor-fill"></i> Endereço</h3>
+                            <p class="section-title">Rua Teste Exemplo nº 145 Bairro bootstrap - São Paulo- SP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
