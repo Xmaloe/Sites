@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício jQueryPLugins</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+        .css {
+    margin: 80px auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+        header h1, h2, form button {
+    font-family: 'Bungee', cursive;
+    font-weight: normal;
+}
+        body {
+    background-color: rgb(74, 148, 216);
+}
+        form input,
+        form button {
+            display: block;
+            width: 320px;
+            margin-bottom: 8px;
+            padding: 8px;
+        }
+
+        form button {
+        background-color: #070647;
+        border: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        font-style: italic;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    button:hover {
+        background-color: #108b8b;
+    }
+
+    footer {
+        background-color: #070647;
+        color: #ecf0f1;
+        padding: 8px 0;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="css">
+        <header></header>
+        <h1>Formulário de Validação</h1>
+        <h2>Preencha os campos:</h2>
+        <form class="form-campo">
+            <input type="text" id="nome" name="nome" placeholder="Nome:" required />
+            <input type="email" id="email" name="email" placeholder="E-mail"/>
+            <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required />
+            <input type="text" id="estado" name="estado" placeholder="Endereço:" required>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" required>
+            <button type="submit">Validar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><!--slide das imagens-->
+    <script src="./jquery.mask.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    <script src="messages_pt_BR.min.js"></script>
+    <script>
+
+            $('#telefone').mask('(00) 00000-0000') 
+            $('#cep').mask('00000-000');
+            $('#cpf').mask('000.000.000-00');
+            
+            $('form').validate({ 
+            rules: {
+            nome: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            telefone: {
+                required: true
+            }                
+            },
+            messages: {
+            nome: 'Por favor, insira o seu nome'
+            },
+            submitHandler: function (form) {
+                console.log(form)
+            },
+            invalidHandler: function (e, validador) {
+                let camposObrigatorios = validador.numberOfInvalids()
+                if(camposObrigatorios) {
+                    alert(`Existem ${camposObrigatorios} campos incorretos`)
+                }
+            }
+        })
+    </script>
+    <footer>
+        <div class="css">
+            <p>
+                &copy; Formulário de Validação - Aprendendo JavaScript - 2023
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

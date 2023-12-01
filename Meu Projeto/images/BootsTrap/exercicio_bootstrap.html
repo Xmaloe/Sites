@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+<style>
+    body {
+        background-color: rgb(74, 148, 216);
+    }
+
+    .container {
+        max-width: 50%;
+        padding-top: 64px;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Entre em contato</h2>
+                <form class="form-campo">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Seu nome:</label>
+                        <input type="text" class="form-control form-control-md" id="nome" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Seu e-mail:</label>
+                        <input type="email" class="form-control" id="email" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tel" class="form-label">Nº Telefone:</label>
+                        <input type="tel" class="form-control" id="tel" name="tel" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Sua mensagem:</label>
+                        <textarea class="form-control" id="mensagem"></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="aceito-termos" />
+                        <label class="form-check-label" for="aceito-termos">Li e concordo com os termos do site</label>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-md">Enviar</button>
+                    <button type="reset" class="btn btn-dark btn-md">Limpar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/localization/messages_pt_BR.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.10/jquery.inputmask.min.js"></script>
+    <script src="messages_pt_BR.min.js"></script>
+    <script>
+        $(document).ready(function () {
+    $('#tel').inputmask('(99) 99999-9999', { placeholder: '' });
+
+    $('form').validate({
+        rules: {
+            nome: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            tel: {
+                required: true
+            }
+        },
+        messages: {
+            nome: 'Por favor, insira o seu nome'
+        },
+        submitHandler: function (form) {
+            console.log(form);
+            return false;
+        },
+        invalidHandler: function (e, validator) {
+            let camposObrigatorios = validator.numberOfInvalids();
+            if (camposObrigatorios) {
+                alert(`Existem ${camposObrigatorios} campos incorretos`);
+            }
+        }
+    });
+});
+    </script>    
+</body>
+</html>

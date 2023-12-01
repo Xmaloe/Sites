@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+<style>
+    time {
+    display: block;
+}
+
+.post {
+    margin-bottom: 24px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-success">
+                    Confira as novidades do blog <a href="#">clicando aqui!</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Últimas postagens</h2>
+                <div class="container g-0"><!--(g-0 alinha as grades com a mensagem de erro)-->
+                    <div class="row">
+                        <div class="col-md-4 post"><!--aplica margem entre botões e grades e o display fica como block-->
+                            <img src="https://via.placeholder.com/180x180" alt="" />
+                            <h4 class="h5">Título da postagem</h4><!--(h5 diminui o tamanho da letra)-->
+                            <time>31/08/2023</time>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="https://via.placeholder.com/180x180" alt="" />
+                            <h4 class="h5">Título da postagem</h4>
+                            <time>31/08/2023</time>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="https://via.placeholder.com/180x180" alt="" />
+                            <h4 class="h5">Título da postagem</h4>
+                            <time>31/08/2023</time>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="https://via.placeholder.com/180x180" alt="" />
+                            <h4 class="h5">Título da postagem</h4>
+                            <time>31/08/2023</time>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="https://via.placeholder.com/180x180" alt="" />
+                            <h4 class="h5">Título da postagem</h4>
+                            <time>31/08/2023</time>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-end"><!--(d-flex)-->
+                <div>
+                    <h2>Anunciantes</h2>
+                    <img src="https://via.placeholder.com/180x180" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Entre em contato</h2>
+                <form>
+                    <label class="form-label" for="nome">Seu nome:</label>
+                    <input class="form-control form-control-md" type="text" id="nome"/>
+                    <label for="email" class="form-label">Seu e-mail:</label>
+                    <input type="email" type="email" class="form-control">
+                    <label for="mensagem" class="form-label">Sua mensagem:</label>
+                    <textarea id="mensagem" class="form-control"></textarea>
+                    <div class="form-check form-switch"><!--o botão do checkbox fica ao lado esquerdo-->
+                        <label class="form-check-label" for="aceito-termos">Li e concordo com os termos do site</label>
+                        <input class="form-check-input" type="checkbox" id="aceito-termos">
+                    </div>
+                    <button class="btn btn-success">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+    
+
+
+
+
+
+
+
+
+
+<div class="grid-container">
+    <section id="bolos">
+        <h3>Bolos</h3>
+        <div class="container g-0">
+            <div class="row">
+                <div class="col-md-4 post">
+                    <article class="card">
+                        <header class="card-header">
+                        </header>
+                        <img src="https://cdn.pixabay.com/photo/2017/05/23/22/33/birthday-2338813_1280.jpg" />
+                        <div class="card-body">
+                            <h4 class="card-title">Bolo Rosita</h4>
+                            <p class="card-text">
+                                Todas as quartas use rosa e delecie este bolo
+                            </p>
+                            <a href="#" class="btn btn-primary">Ingredientes</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4 post">
+                    <article class="card">
+                        <header class="card-header">
+                        </header>
+                        <img src="https://cdn.pixabay.com/photo/2016/10/16/12/16/cake-1745029_1280.jpg" />
+                        <div class="card-body">
+                            <h4 class="card-title">Bolo Mãe das Matas</h4>
+                            <p class="card-text">
+                                Tão elegante quanto um belo casamento na floresta 
+                            </p>
+                            <a href="#" class="btn btn-primary">Ingredientes</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4 post">
+                    <article class="card">
+                        <header class="card-header">
+                        </header>
+                        <img src="https://cdn.pixabay.com/photo/2017/01/11/11/33/cake-1971552_1280.jpg" />
+                        <div class="card-body">
+                            <h4 class="card-title">Bolo da Dinda</h4>
+                            <p class="card-text">
+                                Tia pediu para fazer o café que o bolo estava pronto
+                            </p>
+                            <a href="#" class="btn btn-primary">Ingredientes</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="paodemel">
+        <h3>Pão de Mel</h3>
+        <div class="container g-0">
+            <div class="row">
+                <div class="col-md-4 post">
+                    <article class="card">
+                        <header class="card-header">
+                        </header>
+                        <img src="https://cdn.pixabay.com/photo/2015/05/04/10/03/honey-752145_1280.jpg" />
+                        <div class="card-body">
+                            <h4 class="card-title">Pão de Mel</h4>
+                            <p class="card-text">
+                                Um clássico com muito carinho
+                            </p>
+                            <a href="#" class="btn btn-primary">Ingredientes</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4 post">
+                    <article class="card">
+                        <header class="card-header">
+                        </header>
+                        <img src="https://cdn.pixabay.com/photo/2022/12/19/18/01/gingerbread-7666270_1280.jpg" />
+                        <div class="card-body">
+                            <h4 class="card-title">Coloque a estrela no topo</h4>
+                            <p class="card-text">
+                                Tão elegante quanto um belo casamento na floresta 
+                            </p>
+                            <a href="#" class="btn btn-primary">Ingredientes</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4 post">
+                    <article class="card">
+                        <header class="card-header">
+                        </header>
+                        <img src="https://cdn.pixabay.com/photo/2019/01/24/23/18/gingerbread-3953535_1280.jpg" />
+                        <div class="card-body">
+                            <h4 class="card-title">Bolo da Dinda</h4>
+                            <p class="card-text">
+                                Tia pediu para fazer o café que o bolo estava pronto
+                            </p>
+                            <a href="#" class="btn btn-primary">Ingredientes</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="copodafelicidade">
+        <h3>Copo da felicidade</h3>
+        <div class="container g-0">
+            <div class="row">
+                <div class="col-4">
+                    <article class="card">
+                        <header class="card-header">
+                        </header>
+                        <img src="https://cdn.pixabay.com/photo/2017/06/18/18/49/panna-cotta-2416749_1280.jpg" />
+                        <div class="card-body">
+                            <h4 class="card-title">Frutas Vermelhas</h4>
+                            <p class="card-text">
+                                Frutas Vermelhas, mas tem roxas também
+                            </p>
+                            <a href="#" class="btn btn-primary">Ingredientes</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-4">
+                    <article class="card">
+                        <header class="card-header">
+                        </header>
+                        <img src="https://cdn.pixabay.com/photo/2016/04/26/16/58/coffe-1354786_1280.jpg" />
+                        <div class="card-body">
+                            <h4 class="card-title">Café na xícara</h4>
+                            <p class="card-text">
+                                Não tome de estômago vazio
+                            </p>
+                            <a href="#" class="btn btn-primary">Ingredientes</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-4">
+                    <article class="card">
+                        <header class="card-header">
+                        </header>
+                        <img src="https://cdn.pixabay.com/photo/2018/01/12/16/31/nougat-3078581_1280.jpg" />
+                        <div class="card-body">
+                            <h4 class="card-title">Paçoca na taça</h4>
+                            <p class="card-text">
+                                Paçoca gourmetizada
+                            </p>
+                            <a href="#" class="btn btn-primary">Ingredientes</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Últimas postagens</h2>
+            <div class="container g-0"><!--(g-0 alinha as grades com a mensagem de erro)-->
+                <div class="row">
+                    <div class="col-md-4 post">
+                        <article class="card">
+                            <header class="card-header">
+                            </header>
+                            <img src="https://cdn.pixabay.com/photo/2015/05/04/10/03/honey-752145_1280.jpg" />
+                            <div class="card-body">
+                                <h4 class="card-title">Pão de Mel</h4>
+                                <p class="card-text">
+                                    Um clássico com muito carinho
+                                </p>
+                                <a href="#" class="btn btn-primary">Ingredientes</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4 post">
+                        <article class="card">
+                            <header class="card-header">
+                            </header>
+                            <img src="https://cdn.pixabay.com/photo/2022/12/19/18/01/gingerbread-7666270_1280.jpg" />
+                            <div class="card-body">
+                                <h4 class="card-title">Coloque a estrela no topo</h4>
+                                <p class="card-text">
+                                    Tão elegante quanto um belo casamento na floresta 
+                                </p>
+                                <a href="#" class="btn btn-primary">Ingredientes</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4 post">
+                        <article class="card">
+                            <header class="card-header">
+                            </header>
+                            <img src="https://cdn.pixabay.com/photo/2019/01/24/23/18/gingerbread-3953535_1280.jpg" />
+                            <div class="card-body">
+                                <h4 class="card-title">Bolo da Dinda</h4>
+                                <p class="card-text">
+                                    Tia pediu para fazer o café que o bolo estava pronto
+                                </p>
+                                <a href="#" class="btn btn-primary">Ingredientes</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <section id="contato">
+        <div class="row">
+            <div class="col">
+                <h2>Entre em contato</h2>
+                <form>
+                    <label class="form-label" for="nome">Seu nome:</label>
+                    <input class="form-control form-control-md" type="text" id="nome"/>
+                    <label for="email" class="form-label">Seu e-mail:</label>
+                    <input type="email" type="email" class="form-control">
+                    <label for="mensagem" class="form-label">Sua mensagem:</label>
+                    <textarea id="mensagem" class="form-control"></textarea>
+                    <div class="form-check form-switch"><!--o botão do checkbox fica ao lado esquerdo-->
+                        <label class="form-check-label" for="aceito-termos">Li e concordo com os termos do site</label>
+                        <input class="form-check-input" type="checkbox" id="aceito-termos">
+                    </div>
+                    <button class="btn btn-success">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>

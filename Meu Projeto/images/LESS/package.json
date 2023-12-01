@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "less": "^4.2.0",
+    "save-dev": "^0.0.1-security"
+  },
+  "name": "less",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "less-watch-compiler": "^1.16.3"
+  },
+  "scripts": {
+    "less": "lessc ./src/styles/main.less ./build/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

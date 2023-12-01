@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANKING</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    .container {
+        margin: 80px auto;
+        max-width: 640px;
+        width: 100%;
+    }
+    
+    form {
+        margin-top: 40px;
+    }
+    
+    input, textarea, button {
+        display: block;
+        padding: 8px;
+        margin-bottom: 8px;
+        width: 100%;
+        resize: none;
+    }
+    
+    button {
+        background-color: #2ecc71;
+        border: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        font-style: italic;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #27ae60;
+    }
+    
+    .success-message {
+        background-color: #27ae60;
+        padding: 16px;
+        color: #fff;
+        display: none;
+    }
+    
+    .error-message {
+        padding: 8px;
+        background-color: red;
+        color: #fff;
+        margin-bottom: 8px;
+        display: none;
+    }
+    
+    input.error {
+        color: red;
+        border-color: red;
+        outline-color: red;
+    }
+    </style>    
+</head>
+<body>
+    <div class="container">
+        <h1>BANKING</h1>
+        <h2>Depósitos</h2>
+        <form id="form-deposito">
+            <input type="text" id="nome-beneficiario" required placeholder="Nome completo do beneficiário" />
+            <p class="error-message">
+                o nome precisa ser completo
+            </p>
+            <input type="number" id="numero-conta" required placeholder="Número da conta" />
+            <input type="number" id="valor-deposito" required placeholder="Valor" />
+            <textarea placeholder="Descrição (opcional)" id="descricao"></textarea>
+            <button id="btn-depositar" type="submit">Depositar</button>
+        </form>
+        <p class="error-message"></p>
+    </div>
+    <script>
+            const form = document.getElementById('form-deposito');
+const nomeBeneficiario = document.getElementById('nome-beneficiario');
+let formValido = false;
+
+function validaNome(nomeCompleto) {
+    const nomeComoArray = nomeCompleto.split(' ');
+    return nomeComoArray.length >= 2;
+}
+
+form.addEventListener('submit', function (e){ 
+    e.preventDefault();
+
+    const numeroContaBeneficiario = document.getElementById('numero-conta');
+    const valorDeposito = document.getElementById('valor-deposito');
+    const mensagemSucesso = `Montante de: <b>${valorDeposito.value}</b> depositado para o cliente: <b>${nomeBeneficiario.value}</b> - conta: <b>${numeroContaBeneficiario.value}</b>`;
+
+    formValido = validaNome(nomeBeneficiario.value)
+    if (formValido) {
+        const containerMensagemSucesso = document.querySelector('.success-message');
+        containerMensagemSucesso.innerHTML = mensagemSucesso;
+        containerMensagemSucesso.style.display = 'block';
+
+        nomeBeneficiario.value = '';
+        numeroContaBeneficiario.value = '';
+        valorDeposito.value = '';
+    } else {
+        nomeBeneficiario.style.border = '1px solid red'
+        document.querySelector('.error-message').style.display = 'block';
+    }
+})
+
+nomeBeneficiario.addEventListener('keyup', function (e) {
+    console.log(e.target.value);
+    formValido = validaNome(e.target.value);
+
+    if (!formValido) {
+        nomeBeneficiario.classList.remove('.error-message');
+        document.querySelector('.error-message').style.display = 'block';
+    } else {
+        nomeBeneficiario.style = '';
+        document.querySelector('.error-message').style.display = 'none';
+    }
+});
+
+    </script>
+</body>
+</html>

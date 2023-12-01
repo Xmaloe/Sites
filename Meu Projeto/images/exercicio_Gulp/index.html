@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando Gulp</title>
+    <link rel="stylesheet" href="./styles/CSS/main.css">
+</head>
+<body>
+    <div class="css">
+        <header></header>
+        <h1>Formulário de Validação</h1>
+        <h2>Preencha os campos:</h2>
+    <form id="validaForm">
+        <input type="number" id="campoA" required placeholder="Valor númerico A" />
+        <input type="number" id="campoB" required placeholder="Valor númerico B" />
+            <button type="submit">Validar</button>
+            <button type="reset">Limpar</button>
+    </form>
+        <div class="success-message"></div> 
+        <div class="error-message"></div> 
+    </div>
+    <script src="./build/JS/index.js"></script>
+</body>
+</html>

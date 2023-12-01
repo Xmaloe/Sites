@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de médias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <title>Calculadora de Médias</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Roboto', sans-serif;
+            }
+        
+            body {
+                background-color: #e7e7e7;
+                padding-top: 100px;
+            }
+        
+            header{
+                display: flex;
+                align-items: center;
+                margin-bottom: 40px;
+            }
+        
+            header img{
+                height: 36px;
+                margin-right: 16px;
+            }
+        
+            header h1{
+                font-size: 40px;
+                font-weight: bold;
+            }
+        
+            .container{
+                max-width: 960px;
+                width: 100%;
+                margin: 0 auto;
+            }
+        
+            form button {
+                background-color: #009432;
+                color: #fff;
+                font-size: 24px;
+                font-weight: bold;
+                cursor: pointer;
+                border: none;
+                padding: 8px;
+            }
+        
+            button:hover {
+                background-color: #1b6cb8;
+            }
+        
+            form input{
+                font-size: 24px;
+                background-color: #fff;
+                border: none;
+                border-bottom: 2px solid black;
+                padding: 8px;
+            } 
+        
+            form{
+                display: flex;
+                max-width: 640px;
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 56px;
+            }
+        
+            table{
+                width: 100%;
+            }
+        
+            table th{
+                border-bottom: 2px solid black;
+                padding: 16px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        
+            table td{
+                padding:  16px 0;
+                text-align: center;
+                font-size: 18px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+            }
+        
+            table td img{
+                height: 30px;
+            }
+        
+            .resultado{
+                padding: 8px;
+                font-weight: bold;
+                color: #fff;
+                background-color: black;
+                border-radius: 3px;
+            }
+        
+            .aprovado {
+                background-color: #009432;
+            }
+        
+            .reprovado {
+                background-color: red;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="imagens/logo.png" alt="capelo e diploma">
+            <h1>Calculadora de médias</h1>
+        </header>
+        <form id="form-atividade">
+            <input type="text" id="nome-atividade" required placeholder="Nome da atividade" />
+            <input type="number" id="nota-atividade" placeholder="Nota da atividade" min="0" max="10" />
+            <button type="submit">Adicionar +</button>
+        </form>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nome da atividade</th>
+                    <th>Nota da atividade</th>
+                    <th>Aprovado?</th>
+                </tr>
+            </thead>
+            <tbody><!-- Table rows will be dynamically added here --></tbody>
+            <tfoot>
+                <tr>
+                    <td>Média final</td>
+                    <td id="media-final-valor">---</td>
+                    <td id="media-final-resultado">---</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script>
+        const form = document.getElementById('form-atividade');
+        const atividades = [];
+        const notas = [];
+        const notaMinima = parseFloat(prompt("Digite a nota mínima:"));
+
+        let linhas = '';
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            adicionaLinha();
+            atualizaTabela();
+            atualizaMediaFinal();
+        });
+
+        function adicionaLinha() {
+            const inputNomeAtividade = document.getElementById('nome-atividade');
+            const inputNotaAtividade = document.getElementById('nota-atividade');
+
+            if (atividades.includes(inputNomeAtividade.value)) {
+                alert(`A atividade: ${inputNomeAtividade.value} já foi inserida`);
+            } else {
+                atividades.push(inputNomeAtividade.value);
+                notas.push(parseFloat(inputNotaAtividade.value));
+
+                const linha = `<tr>
+                    <td>${inputNomeAtividade.value}</td>
+                    <td>${inputNotaAtividade.value}</td>
+                    <td>${inputNotaAtividade.value >= notaMinima ? '<span class="resultado aprovado">Aprovado</span>' : '<span class="resultado reprovado">Reprovado</span>'}</td>
+                </tr>`;
+
+                linhas += linha;
+            }
+
+            inputNomeAtividade.value = '';
+            inputNotaAtividade.value = '';
+        }
+
+        function atualizaTabela() {
+            const corpoTabela = document.querySelector('tbody');
+            corpoTabela.innerHTML = linhas;
+        }
+
+        function atualizaMediaFinal() {
+            const mediaFinal = calculaMediaFinal();
+            document.getElementById('media-final-valor').textContent = mediaFinal.toFixed(2);
+            document.getElementById('media-final-resultado').textContent = mediaFinal >= notaMinima ? 'Aprovado' : 'Reprovado';
+        }
+
+        function calculaMediaFinal() {
+            let somaDasNotas = 0;
+            for (let i = 0; i < notas.length; i++) { // Fixed typo: changed 'legnth' to 'length'
+                somaDasNotas += notas[i];
+            }
+
+            return somaDasNotas / notas.length; // Fixed typo: changed 'legnth' to 'length'
+        }
+    </script>
+</body>
+</html>

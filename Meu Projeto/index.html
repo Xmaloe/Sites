@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karen Aprigio Moraes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./build/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
+            <h1 class="navbar-brand m-0 section-title" style="font-size: 24px;">Karen Aprigio Moraes</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegecao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <nav class="navbar-collapse collapse justify-content-end" id="menu-navegecao">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link"><img width="48" height="48" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg" alt="png"></a><!--active adiciona background color nas bordas e espaçamento-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><img width="48" height="48" src="./images/js.png" alt="png"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><img width="48" height="48" src="https://img.icons8.com/fluency/48/node-js.png" alt="node-js"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><img width="48" height="48" src="https://img.icons8.com/plasticine/100/react.png" alt="png"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><img width="48" height="48" src="./images/gulp.png" alt="gulp"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><img width="48" height="48" src="./images/sass.png" alt="sass"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><img width="48" height="48" src="./images/sql.png" alt="sql"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><img width="48" height="48" src="./images/python.png" alt="python"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <section class="informacao">
+                <div class="pt-4 pb-5">
+                            <div>
+                                    <img  class="profile-avatar" src="./images/Karen.jpg">
+                                <div class="profile-bio">
+                                    <h1 class="profile-bio-name">Perfil Karen Aprigio Moraes</h1>
+                                    <h2 class="profile-bio-subtitle">Desenvolvedora Full Stack</h2>
+                                <p class="profile-bio-description"> Sou estudante de Economia, atualmente cursando o 6º semestre da graduação. Ao longo dos últimos três anos, adquiri relevante experiência profissional na área Administrativa e Financeira, onde pude aprimorar minhas habilidades analíticas e organizacionais.
+                                    Minha paixão por entender o funcionamento das empresas e o impacto das decisões econômicas me motivou a explorar novos horizontes. Recentemente, iniciei uma jornada de aprendizado na área de desenvolvimento de software junto a EBAC (Escola Britânica de Artes Criativas e Tecnologia), buscando expandir meu conhecimento e habilidades para contribuir de maneira ainda mais significativa nas organizações.                                    
+                                    Estou animada com a perspectiva de unir minha formação em Economia às habilidades técnicas adquiridas no desenvolvimento de software, buscando oportunidades para aplicar meu raciocínio analítico e criativo em projetos inovadores.
+                                    </p>
+                            </div>
+                        <div>
+                            <h2 class="text-center mb-4 fw-bold fs-4">Redes Sociais</h2>
+                                <nav>
+                                    <ul class="social-links">
+                                        <li>
+                                            <a href="https://www.instagram.com/_xmaloe/">
+                                                <img src="images/instagram.svg" alt="Logo do Instagram" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/karen-aprigio-moraes-babb4617a/">
+                                                <img src="images/linkedin.svg" alt="Logo do Linkedin" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/Xmaloe">
+                                                <img src="images/github.svg" alt="Logo do Github" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:karenmoraes222@gmail.com">
+                                                <img src="images/mail.svg" alt="Logo do Email" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                        </div>
+                </div>
+        </section>
+        <section class="skills">
+                <div>
+                    <h1 class="text-center mb-2 mt-4 fs-4 fw-bold">Tecnologias</h1>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-container">
+                                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg" alt="Git Logo">
+                                <div class="card-info"> 
+                                    <h3 class="fs-6">Git</h3>
+                                    <p>6 meses praticando</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-container">
+                                <img src="./images/css.png" alt="CSS Logo">
+                                <div class="card-info">
+                                    <h3 class="fs-6">CSS</h3>
+                                    <p>6 meses praticando</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-container">
+                                <img src="./images/js.png" alt="JavaScript Logo">
+                                <div class="card-info">
+                                    <h3 class="fs-6">JavaScript</h3>
+                                    <p>5 meses praticando</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-container">
+                                <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" alt="Frameworks Logo">
+                                <div class="card-info">
+                                    <h3 class="fs-6">Frameworks</h3>
+                                    <p>4 meses praticando</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-container">
+                                <img src="https://img.icons8.com/fluency/48/node-js.png" alt="NodeJs Logo">
+                                <div class="card-info">
+                                    <h3 class="fs-6">NodeJs</h3>
+                                    <p>2 meses praticando</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-container">
+                                <img src="./images/sql.png" alt="SQL Logo">
+                            <div class="card-info">
+                                <h3 class="fs-6">SQL</h3>
+                                <p>9 meses praticando</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="main mt-2">
+            <div class="swiper">
+                <h1 class="text-center mb-4 fs-4 fw-bold">Meus Projetos</h1>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="images/BootsTrap.png" alt="Projeto BootsTrap">
+                            <div class="card-info">
+                                <h3 class="fs-6">Projeto BootsTrap</h3>
+                                <a href="https://sites-vert.vercel.app/" class="btn"><i class="bi bi-clipboard2-check-fill"></i>Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="images/LESS e Grunt.png" alt="Projeto LESS e Grunt">
+                            <div class="card-info">
+                                <h3 class="fs-6">Projeto Less/Grunt</h3>
+                                <a href="#" class="btn"><i class="bi bi-clipboard2-check-fill"></i>Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="images/JavaScript e Jquery.png" alt="Projeto Javascript e Jquery">
+                            <div class="card-info">
+                                <h3 class="fs-6">Projeto Jquery</h3>
+                                <a href="#" class="btn"><i class="bi bi-clipboard2-check-fill"></i>Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="images/Grunt.png" alt="Grunt">
+                            <div class="card-info">
+                                <h3 class="fs-6">Projeto Grunt</h3>
+                                <a href="#" class="btn"><i class="bi bi-clipboard2-check-fill"></i>Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="images/Grunt.png" alt="Grunt">
+                            <div class="card-info">
+                                <h3 class="fs-6">Projeto Grunt</h3>
+                                <a href="#" class="btn"><i class="bi bi-clipboard2-check-fill"></i>Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="images/Grunt.png" alt="Grunt">
+                            <div class="card-info">
+                                <h3 class="fs-6">Projeto Grunt</h3>
+                                <a href="#" class="btn"><i class="bi bi-clipboard2-check-fill"></i>Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="images/Grunt.png" alt="Grunt">
+                            <div class="card-info">
+                                <h3 class="fs-6">Projeto Grunt</h3>
+                                <a href="#" class="btn"><i class="bi bi-clipboard2-check-fill"></i>Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="images/Grunt.png" alt="Grunt">
+                            <div class="card-info">
+                                <h3 class="fs-6">Projeto Grunt</h3>
+                                <a href="#" class="btn"><i class="bi bi-clipboard2-check-fill"></i>Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="images/Grunt.png" alt="Grunt">
+                            <div class="card-info">
+                                <h3 class="fs-6">Projeto Grunt</h3>
+                                <a href="#" class="btn"><i class="bi bi-clipboard2-check-fill"></i>Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./source/main.js"></script>
+</body>
+</html> 
