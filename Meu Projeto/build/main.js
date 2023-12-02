@@ -1,1 +1,0 @@
-const swiper=new Swiper(".swiper",{slidesPerView:"auto",navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},autoplay:{delay:3e3,disableOnInteraction:!1}});
